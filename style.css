@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    padding-bottom: 200px; /* Espaço para os controles fixos */
+}
+
+.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#conteudo-texto {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: black;
+    opacity: 0.8;
+    text-align: center;
+    transition: font-size 0.3s, opacity 0.3s, width 0.3s, background-color 0.3s;
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    word-wrap: break-word; /* Compatibilidade com navegadores antigos */
+    word-break: break-word;
+    white-space: normal; /* Permite quebra de linha */
+}
+
+.dark-mode #conteudo-texto {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+}
+
+textarea {
+    resize: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+}
+
+.dark-mode textarea {
+    background-color: #333333;
+    color: white;
+    border: 1px solid #555;
+}
+
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #f1f1f1;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.dark-mode label {
+    color: white;
+}
+
+.controles-fixos {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.dark-mode .controles-fixos {
+    background-color: rgba(50, 50, 50, 0.95);
+    box-shadow: 0px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.controles-fixos .form-control {
+    width: 100%;
+    font-size: 14px;
+}
+
+.controles-fixos .d-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.w-25 {
+    flex: 1;
+    min-width: 150px;
+}
